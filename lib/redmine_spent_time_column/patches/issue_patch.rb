@@ -3,7 +3,7 @@ module RedmineSpentTimeColumn
     module IssuePatch
       
       def calculated_spent_hours
-        @calculated_spent_hours ||= self_and_descendants.sum("estimated_hours * done_ratio / 100").to_f || 0.0
+        @calculated_spent_hours ||= ((estimated_hours || 0.0) * done_ratio / 100) || 0.0
       end
       
       def divergent_hours
@@ -11,7 +11,7 @@ module RedmineSpentTimeColumn
       end
       
       def calculated_remaining_hours
-        @calculated_remaining_hours ||= self_and_descendants.sum("estimated_hours - (estimated_hours * done_ratio / 100)").to_f || 0.0
+        @calculated_remaining_hours ||= (((estimated_hours || 0.0) * (100 - done_ratio)) / 100) || 0.0
       end
       
       def aggregated_spent_hours
@@ -19,7 +19,7 @@ module RedmineSpentTimeColumn
       end
       
       def aggregated_divergent_hours
-        @aggregated_remaining_hours ||= (aggregated_spent_hours - self_and_descendants.sum("estimated_hours * done_ratio / 100").to_f) || 0.0
+        @aggregated_remaining_hours ||= (aggregated_spent_hours - (estimated_hours || 0.0) * done_ratio / 100) || 0.0
       end
       
     end
