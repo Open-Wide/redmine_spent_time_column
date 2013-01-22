@@ -2,12 +2,18 @@
   label_calculated_spent_hours: Obliczony czas
   label_divergent_hours: Różnica czasu 
   label_calculated_remaining_hours: Pozostały czas
+  label_aggregated_spent_hours: Zagregowane spędzone godziny
+  label_aggregated_divergent_hours: Zagregowane rozbieżne godziny
   setting_show_bottom_summary_line_on_issuelists: Display bottom summary line on issuelists
   setting_show_bottom_summary_line_estimated_hours: Show Estimated time
   setting_show_bottom_summary_line_spent_hours: Show Spent time
   setting_show_bottom_summary_line_calculated_spent_hours: Show Calculated spent time
   setting_show_bottom_summary_line_divergent_hours: Show Divergent time
   setting_show_bottom_summary_line_calculated_remaining_hours: Show Calculated remaining time
+  setting_show_bottom_summary_line_aggregated_spent_hours: Show aggregated spent hours 
+  setting_show_bottom_summary_line_aggregated_divergent_hours: Show aggregated divergent hours 
+  setting_enable_aggregated_spent_hours_column: Enable aggregated spent hours 
+  setting_enable_aggregated_divergent_hours_column: Enable aggregated divergent hours   
   setting_enable_spent_hours_column: Enable Spent time column
   setting_enable_calculated_spent_hours_column: Enable Calculated spent time column
   setting_enable_divergent_hours_column: Enable Divergent time column

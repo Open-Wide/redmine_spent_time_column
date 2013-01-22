@@ -33,6 +33,22 @@ module RedmineSpentTimeColumn
               :sortable => "(IF(#{Issue.table_name}.estimated_hours IS NULL,0,#{Issue.table_name}.estimated_hours) - (IF(#{Issue.table_name}.estimated_hours IS NULL,0,#{Issue.table_name}.estimated_hours) * #{Issue.table_name}.done_ratio / 100))"
             ) unless columns.detect{ |c| c.name == :calculated_remaining_hours }
           end
+          
+          # Sort is not properly implemented for aggregated fields
+          if Setting.plugin_redmine_spent_time_column['enable_aggregated_spent_hours_column'] == '1'
+            columns << QueryColumn.new(:aggregated_spent_hours,
+              :caption => :label_aggregated_spent_hours,
+              :sortable => "0"
+            ) unless columns.detect{ |c| c.name == :aggregated_spent_hours }
+          end
+          
+          if Setting.plugin_redmine_spent_time_column['enable_aggregated_divergent_hours_column'] == '1'
+            columns << QueryColumn.new(:aggregated_divergent_hours,
+              :caption => :label_aggregated_divergent_hours,
+              :sortable => "0"
+            ) unless columns.detect{ |c| c.name == :aggregated_divergent_hours }
+          end
+                 
         end
         columns
       end

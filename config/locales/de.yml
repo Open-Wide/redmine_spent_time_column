@@ -2,12 +2,18 @@
   label_calculated_spent_hours: Rechnerisch aufgewendete Zeit
   label_divergent_hours: Zeitabweichung
   label_calculated_remaining_hours: Verbleibende Zeit
+  label_aggregated_spent_hours: Aggregierte verbrachte Stunden
+  label_aggregated_divergent_hours: Aggregierte divergent Stunden
   setting_show_bottom_summary_line_on_issuelists: Fußzeile für die aufgewendete Zeit in der Ticketliste anzeigen
   setting_show_bottom_summary_line_estimated_hours: Geschätzte Zeit anzeigen
   setting_show_bottom_summary_line_spent_hours: Aufgewendete Zeit anzeigen
   setting_show_bottom_summary_line_calculated_spent_hours: Rechnerisch aufgewendete Zeit anzeigen
   setting_show_bottom_summary_line_divergent_hours: Abweichung zwischen aufgewendeter Zeit und Schätzung anzeigen
   setting_show_bottom_summary_line_calculated_remaining_hours: Verleibende Zeit anzeigen
+  setting_show_bottom_summary_line_aggregated_spent_hours: Show aggregated spent hours 
+  setting_show_bottom_summary_line_aggregated_divergent_hours: Show aggregated divergent hours 
+  setting_enable_aggregated_spent_hours_column: Enable aggregated spent hours 
+  setting_enable_aggregated_divergent_hours_column: Enable aggregated divergent hours 
   setting_enable_spent_hours_column: Spalte für verleibende Zeit verfügbar machen
   setting_enable_calculated_spent_hours_column: Spalte für rechnerisch aufgewendete Zeit verfügbar machen
   setting_enable_divergent_hours_column: Spalte für Abweichung zwischen aufgewendeter Zeit und Schätzung verfügbar machen

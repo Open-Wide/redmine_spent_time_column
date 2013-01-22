@@ -4,7 +4,7 @@ module RedmineSpentTimeColumn
       
       def column_content_with_spent_hours(column, issue)
         value = column.value(issue)
-        if %w(Fixnum Float).include?( value.class.name ) and [:spent_hours, :calculated_spent_hours, :divergent_hours, :calculated_remaining_hours].include?(column.name)
+        if %w(Fixnum Float).include?( value.class.name ) and [:spent_hours, :calculated_spent_hours, :divergent_hours, :calculated_remaining_hours, :aggregated_spent_hours, :aggregated_divergent_hours].include?(column.name)
           sprintf "%.2f", value
         else
           column_content_without_spent_hours(column, issue)

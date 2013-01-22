@@ -1,6 +1,6 @@
 <%
     allowed_to_view_time_entries = true
-    estimated_hours = spent_hours = calculated_spent_hours = divergent_hours = calculated_remaining_hours = backlogs_remaining_hours = 0.0
+    estimated_hours = spent_hours = calculated_spent_hours = divergent_hours = calculated_remaining_hours = backlogs_remaining_hours = aggregated_spent_hours = aggregated_divergent_hours = 0.0
     if Setting.plugin_redmine_spent_time_column['show_bottom_summary_line_on_issuelists'] == '1'
         @issues.each do |issue|
             if User.current.allowed_to?(:view_time_entries, issue.project)
@@ -21,6 +21,12 @@
                 end
                 if Setting.plugin_redmine_spent_time_column['show_bottom_summary_line_backlogs_remaining_hours'] == '1'
                     backlogs_remaining_hours  += issue.remaining_hours  ||0.0
+                end
+                if Setting.plugin_redmine_spent_time_column['show_bottom_summary_line_aggregated_spent_hours'] == '1'
+                    aggregated_spent_hours  += issue.aggregated_spent_hours  ||0.0
+                end
+                if Setting.plugin_redmine_spent_time_column['show_bottom_summary_line_aggregated_divergent_hours'] == '1'
+                    aggregated_divergent_hours  += issue.aggregated_divergent_hours  ||0.0
                 end
             else
                 allowed_to_view_time_entries = false if not User.current.admin?
@@ -48,6 +54,12 @@
     <% end -%>
     <% if Setting.plugin_redmine_spent_time_column['show_bottom_summary_line_backlogs_remaining_hours'] == '1' -%>
         <strong><%= t :label_remaining_hours %>:</strong> <%= backlogs_remaining_hours.round(2) %>
+    <% end -%>
+    <% if Setting.plugin_redmine_spent_time_column['show_bottom_summary_line_aggregated_spent_hours'] == '1' -%>
+        <strong><%= t :label_aggregated_spent_hours %>:</strong> <%= aggregated_spent_hours.round(2) %>
+    <% end -%>
+    <% if Setting.plugin_redmine_spent_time_column['show_bottom_summary_line_aggregated_divergent_hours'] == '1' -%>
+        <strong><%= t :label_aggregated_divergent_hours %>:</strong> <%= aggregated_divergent_hours.round(2) %>
     <% end -%>
 </p>
 <% end -%>
