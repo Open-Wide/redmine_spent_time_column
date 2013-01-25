@@ -11,7 +11,7 @@ module RedmineSpentTimeColumn
       end
       
       def calculated_remaining_hours
-        @calculated_remaining_hours ||= done_ratio == 0 ? estimated_hours : aggregatted_spent_hours * (100 - done_ratio) / 100
+        @calculated_remaining_hours ||= done_ratio == 0 ? estimated_hours : aggregated_spent_hours * (100 - done_ratio) / 100
       end
       
       def aggregated_spent_hours
