@@ -11,10 +11,18 @@ else
 end
 
 object_to_prepare.to_prepare do
-  Issue.send(:include, RedmineSpentTimeColumn::Patches::IssuePatch) unless Issue.include?(RedmineSpentTimeColumn::Patches::IssuePatch)
+  unless Issue.include? RedmineSpentTimeColumn::Patches::IssuePatch
+    Issue.send(:include, RedmineSpentTimeColumn::Patches::IssuePatch) unless Issue.include?(RedmineSpentTimeColumn::Patches::IssuePatch)
+  end
+  unless Query.include? RedmineSpentTimeColumn::Patches::QueryPatch
   Query.send(:include, RedmineSpentTimeColumn::Patches::QueryPatch) unless Query.include?(RedmineSpentTimeColumn::Patches::QueryPatch)
+  end
+  unless IssueQuery.include? RedmineSpentTimeColumn::Patches::IssueQueryPatch
   IssueQuery.send(:include, RedmineSpentTimeColumn::Patches::IssueQueryPatch) unless Query.include?(RedmineSpentTimeColumn::Patches::IssueQueryPatch)
+  end
+  unless QueriesHelper.include? RedmineSpentTimeColumn::Patches::QueriesHelperPatch
   QueriesHelper.send(:include, RedmineSpentTimeColumn::Patches::QueriesHelperPatch) unless QueriesHelper.include?(RedmineSpentTimeColumn::Patches::QueriesHelperPatch)
+  end
 end
 
 Redmine::Plugin.register :redmine_spent_time_column do
