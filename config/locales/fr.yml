@@ -1,16 +1,17 @@
 'fr':
-  label_calculated_spent_hours: Calculated spent time
-  label_divergent_hours: Divergent time 
-  label_calculated_remaining_hours: Calculated remaining time
-  setting_show_bottom_summary_line_on_issuelists: Display bottom summary line on issuelists
-  setting_show_bottom_summary_line_estimated_hours: Show Estimated time
-  setting_show_bottom_summary_line_spent_hours: Show Spent time
-  setting_show_bottom_summary_line_calculated_spent_hours: Show Calculated spent time
-  setting_show_bottom_summary_line_divergent_hours: Show Divergent time
-  setting_show_bottom_summary_line_calculated_remaining_hours: Show Calculated remaining time
-  setting_enable_spent_hours_column: Enable Spent time column
-  setting_enable_calculated_spent_hours_column: Enable Calculated spent time column
-  setting_enable_divergent_hours_column: Enable Divergent time column
-  setting_enable_calculated_remaining_hours_column: Enable Calculated remaining time column
-  legend_bottom_summary_line_settings: Bottom summary line settings
-  legend_column_settings: Column settings
+  label_calculated_spent_hours: Temps passé calculé
+  label_divergent_hours: Divergence temps passés
+  label_calculated_remaining_hours: Temps restant calculé
+  setting_show_bottom_summary_line_on_issuelists: Afficher le résumé en bas de la liste des demandes
+  setting_show_bottom_summary_line_estimated_hours: Afficher le temps estimé
+  setting_show_bottom_summary_line_spent_hours: Afficher le temps passé
+  setting_show_bottom_summary_line_calculated_spent_hours: Afficher le temps passé calculé
+  setting_show_bottom_summary_line_divergent_hours: Afficher la divergence temps passés
+  setting_show_bottom_summary_line_calculated_remaining_hours: Afficher le temps restant calculé
+  setting_enable_spent_hours_column: Activer la colonne "Temps passé"
+  setting_enable_calculated_spent_hours_column: Activer la colonne "Temps restant calculé"
+  setting_enable_divergent_hours_column: Activer la colonne "Divergence temps passés"
+  setting_enable_calculated_remaining_hours_column: Activer la colonne "Temps restant"
+  legend_bottom_summary_line_settings: Configuration de la ligne de résumé
+  legend_column_settings: Configiration des colonnes
+  label_total_spent_time: Temps passé total
