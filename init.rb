@@ -1,5 +1,5 @@
 require 'redmine'
-require 'redmine_spent_time_column/hooks'
+require_dependency 'redmine_spent_time_column/hooks'
 
 if Rails::VERSION::MAJOR < 3
   require 'dispatcher'
